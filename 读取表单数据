@@ -1,0 +1,382 @@
+<div>
+    <form method="post"> //这个是一定要的，这是表单
+            <div class="form-middle" id="PanelHome" style="width: 1000px;height: 300px;">
+                <div class="x-panel-personalinfo" id="Panel1" style="width:800px;">
+                    <div class="widget-box" style="padding: 10px;width: 600px;" >
+                        <div class="widget-header" style="padding: 10px;width: 590px;">
+                            <h4>个人基本信息</h4>
+
+											<span class="widget-toolbar">
+												<a href="#" data-action="collapse">
+                                                    <i class="icon-chevron-up"></i>
+                                                </a>
+
+												<a href="#" data-action="close">
+                                                    <i class="icon-remove"></i>
+                                                </a>
+											</span>
+                        </div>
+
+                         <div class="widget-body"><div class="widget-body-inner">
+                                                    <div class="widget-main">
+                                                        <div class="row-fluid">
+                                                            <label for="form-field-8">姓名</label>
+                                                            <label for="form-field-8">
+                                                                <% if(user){ %><%=user.NickName %><% } %>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    </div></div>
+
+
+                                <hr>
+                                 <div class="widget-body"><div class="widget-body-inner">
+                                     <div class="widget-main">
+                                        <div class="row-fluid">
+                                            <label for="form-field-8">工号</label>
+                                               <label for="form-field-8">
+                                                  <% if(user){ %><%= user.RoleID %><% } %>
+                                               </label>
+                                         </div>
+                                     </div>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="widget-box" style="padding: 10px;width: 600px;" >
+                <div class="widget-header" style="padding: 10px;width: 590px;">
+                                            <h4>出差基本信息</h4>
+
+                											<span class="widget-toolbar">
+                												<a href="#" data-action="collapse">
+                                                                    <i class="icon-chevron-up"></i>
+                                                                </a>
+
+                												<a href="#" data-action="close">
+                                                                    <i class="icon-remove"></i>
+                                                                </a>
+                											</span>
+                                        </div>
+                <div class="control-group" style="float:left; width:300px;">
+                    <label class="control-label" for="form-field-1">标题</label>
+                        <div class="controls">
+                            <input type="text" id="form-field-1" placeholder="T">
+                        </div>
+                </div>
+                <div class="control-group" >
+                    <label class="control-label" for="form-field-1">出差目的地</label>
+                        <div class="controls">
+                            <input type="text" id="form-field-1" placeholder="Destination">
+                        </div>
+                </div>
+                <div class="time-control" style="float:left; width:300px;">
+                <label for="form-field-mask-1">出发时间
+                    <small class="text-success"></small>
+                </label>
+                <div class="input-append">
+                	<input class="input-small input-mask-date" type="text" id="form-field-mask-1">
+                     <span class="btn btn-small">
+                	    <i class="icon-calendar bigger-110"></i>Go!
+                	 </span>
+                </div>
+                </div>
+                <div class="time-control">
+                <label for="form-field-mask-1">回归时间
+                     <small class="text-success"></small>
+                 </label>
+                 <div class="input-append">
+                    <input class="input-small input-mask-date" type="text" id="form-field-mask-1">
+                        <span class="btn btn-small">
+                            <i class="icon-calendar bigger-110"></i>Go!
+                        </span>
+                 </div>
+                 </div>
+              <div class="widget-box">
+                <div class="widget-header widget-header-small  header-color-green">
+                    <div id="editor-toolbar-2" class="btn-toolbar wysiwyg-toolbar">
+                        <div class="btn-group">
+                            <a class="btn btn-small btn-grey" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)">
+                            <i class=" icon-bold"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)">
+                            <i class=" icon-italic"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="strikethrough" title="" data-original-title="Strikethrough">
+                            <i class=" icon-strikethrough"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)">
+                            <i class=" icon-underline"></i>
+                            </a>
+                         </div>
+                         <div class="btn-group">
+                            <a class="btn btn-small btn-grey" data-edit="insertunorderedlist" title="" data-original-title="Bullet list">
+                                <i class=" icon-list-ul"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="insertorderedlist" title="" data-original-title="Number list">
+                                <i class=" icon-list-ol"></i>
+                            </a>
+                         </div>
+                         <div class="btn-group">
+                            <a class="btn btn-small btn-grey active" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)">
+                                <i class=" icon-align-left"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)">
+                                <i class=" icon-align-center"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)">
+                                <i class=" icon-align-right"></i>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="widget-toolbar">
+                        <a href="#" data-action="collapse">
+                            <i class="icon-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-body-inner">
+                        <div class="widget-main no-padding">
+                            <div class="wysiwyg-editor" id="editor2" style="height:200px;" contenteditable="true"></div>
+                        </div>
+                        <div class="widget-toolbox padding-4 clearfix">
+                            <div class="btn-group pull-left" >
+                                <button class="btn btn-small btn-grey" id="cancel">
+                                    <i class="icon-remove bigger-125"></i>Cancel
+                                </button>
+                            </div>
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-small btn-success" id="save">
+                                    <i class="icon-save bigger-125"></i>Save
+                                </button>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            </form><div>
+    <form method="post">
+            <div class="form-middle" id="PanelHome" style="width: 1000px;height: 300px;">
+                <div class="x-panel-personalinfo" id="Panel1" style="width:800px;">
+                    <div class="widget-box" style="padding: 10px;width: 600px;" >
+                        <div class="widget-header" style="padding: 10px;width: 590px;">
+                            <h4>个人基本信息</h4>
+
+											<span class="widget-toolbar">
+												<a href="#" data-action="collapse">
+                                                    <i class="icon-chevron-up"></i>
+                                                </a>
+
+												<a href="#" data-action="close">
+                                                    <i class="icon-remove"></i>
+                                                </a>
+											</span>
+                        </div>
+
+                         <div class="widget-body"><div class="widget-body-inner">
+                                                    <div class="widget-main">
+                                                        <div class="row-fluid">
+                                                            <label for="form-field-8">姓名</label>
+                                                            <label for="form-field-8">
+                                                                <% if(user){ %><%=user.NickName %><% } %>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    </div></div>
+
+
+                                <hr>
+                                 <div class="widget-body"><div class="widget-body-inner">
+                                     <div class="widget-main">
+                                        <div class="row-fluid">
+                                            <label for="form-field-8">工号</label>
+                                               <label for="form-field-8">
+                                                  <% if(user){ %><%= user.RoleID %><% } %>
+                                               </label>
+                                         </div>
+                                     </div>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="widget-box" style="padding: 10px;width: 600px;" >
+                <div class="widget-header" style="padding: 10px;width: 590px;">
+                                            <h4>出差基本信息</h4>
+
+                											<span class="widget-toolbar">
+                												<a href="#" data-action="collapse">
+                                                                    <i class="icon-chevron-up"></i>
+                                                                </a>
+
+                												<a href="#" data-action="close">
+                                                                    <i class="icon-remove"></i>
+                                                                </a>
+                											</span>
+                                        </div>
+                <div class="control-group" style="float:left; width:300px;">
+                    <label class="control-label" for="form-field-1">标题</label>
+                        <div class="controls">
+                            <input type="text" id="form-field-1" placeholder="T">
+                        </div>
+                </div>
+                <div class="control-group" >
+                    <label class="control-label" for="form-field-1">出差目的地</label>
+                        <div class="controls">
+                            <input type="text" id="form-field-1" placeholder="Destination">
+                        </div>
+                </div>
+                <div class="time-control" style="float:left; width:300px;">
+                <label for="form-field-mask-1">出发时间
+                    <small class="text-success"></small>
+                </label>
+                <div class="input-append">
+                	<input class="input-small input-mask-date" type="text" id="form-field-mask-1">
+                     <span class="btn btn-small">
+                	    <i class="icon-calendar bigger-110"></i>Go!
+                	 </span>
+                </div>
+                </div>
+                <div class="time-control">
+                <label for="form-field-mask-1">回归时间
+                     <small class="text-success"></small>
+                 </label>
+                 <div class="input-append">
+                    <input class="input-small input-mask-date" type="text" id="form-field-mask-1">
+                        <span class="btn btn-small">
+                            <i class="icon-calendar bigger-110"></i>Go!
+                        </span>
+                 </div>
+                 </div>
+              <div class="widget-box">
+                <div class="widget-header widget-header-small  header-color-green">
+                    <div id="editor-toolbar-2" class="btn-toolbar wysiwyg-toolbar">
+                        <div class="btn-group">
+                            <a class="btn btn-small btn-grey" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)">
+                            <i class=" icon-bold"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)">
+                            <i class=" icon-italic"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="strikethrough" title="" data-original-title="Strikethrough">
+                            <i class=" icon-strikethrough"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)">
+                            <i class=" icon-underline"></i>
+                            </a>
+                         </div>
+                         <div class="btn-group">
+                            <a class="btn btn-small btn-grey" data-edit="insertunorderedlist" title="" data-original-title="Bullet list">
+                                <i class=" icon-list-ul"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="insertorderedlist" title="" data-original-title="Number list">
+                                <i class=" icon-list-ol"></i>
+                            </a>
+                         </div>
+                         <div class="btn-group">
+                            <a class="btn btn-small btn-grey active" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)">
+                                <i class=" icon-align-left"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)">
+                                <i class=" icon-align-center"></i>
+                            </a>
+                            <a class="btn btn-small btn-grey" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)">
+                                <i class=" icon-align-right"></i>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="widget-toolbar">
+                        <a href="#" data-action="collapse">
+                            <i class="icon-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <div class="widget-body-inner">
+                        <div class="widget-main no-padding">
+                            <div class="wysiwyg-editor" id="editor2" style="height:200px;" contenteditable="true"></div>
+                        </div>
+                        <div class="widget-toolbox padding-4 clearfix">
+                            <div class="btn-group pull-left" >
+                                <button class="btn btn-small btn-grey" id="cancel">
+                                    <i class="icon-remove bigger-125"></i>Cancel
+                                </button>
+                            </div>
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-small btn-success" id="save">
+                                    <i class="icon-save bigger-125"></i>Save
+                                </button>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            </form> //html就不多说了，我错就犯在没用form
+          
+          
+接下来是在路由中的index.js添加get和post
+
+        app.get('/BusApp', function (req, res) {
+        if (!req.user) {
+            req.flash('error',"请先登录");
+            return res.redirect('/');
+        } //此处验证是否登陆，user是用户数据表
+        
+        res.render('BusApp', { title: '商务出差申请', user: req.user, success: req.flash('success').toString(),
+            error: req.flash('error').toString()});
+    });
+    app.post('/BusApp', function (req, res) {
+        var userInfo = {
+            title: req.body.title,
+            reason:req.body.reason,
+            destination:req.body.destination,
+            time:req.body.time
+        } //此处定义一个实体数据
+        
+        Post.BusInfo(userInfo);//将实体数据作为参数传入BusInfo()中
+        return res.redirect('/');
+        
+    });
+    
+接下来是写该界面的方法BuaAPP.js
+ 
+ var mongoose = require('../modules/db'),
+     allmodel = require('../modules/datamodel');//这里调用定义好的数据模块
+
+
+allmodel.BindModel('BusinessApp');
+var BusinessApp =mongoose.model('BusinessApp');
+
+exports.BusData = function(username, workid, time) {
+    this.user = username;
+    this.workNum = workid;
+    if (time) {
+        this.time = time;
+    } else {
+        this.time = new Date();
+    }
+}
+
+exports.BusInfo = function(Obj){//这里定义index.js所用到的方法，获取表单数据写入数据库
+    var newInfo = new BusinessApp({
+        title:Obj.title,
+        reason:Obj.reason,
+        Number:this.workNum,
+        Name:this.name,
+        Sex:'f',
+        WorkNo:this.workNum,
+        Department:this.department,
+        PhoneNum:'11334455',
+        AppTime:{type:Date,default:Date.now},
+        BusTime:'20130101',
+        Destination:Obj.destination,
+        VerifyOrNot:1,
+        ApproveOrNot:1,
+        UpdateTime:{type:Date,Default:true}
+
+    })
+    newInfo.save(function(err){//将数据保存
+        if(err){
+            console.log('save error');
+        }
+    })
+};
